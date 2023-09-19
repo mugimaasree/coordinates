@@ -1,0 +1,11 @@
+<p>Input</p>
+<div class="create" (dblclick)="onCreateBox($event)" (keydown)="handleDeleteKey($event)" tabindex="0">
+  <div
+    *ngFor="let box of boxService.createbox | async"
+    class="createbox"
+    [ngStyle]="{ 'left.px': box.x, 'top.px': box.y }"
+    [class.highlight]="box === selectedBox || box === (boxService.highlightedBox$ | async)"
+    (click)="toggleBorder(box)"
+    [routerLink]="['/input',{x:box.x,y:box.y}]"  (dblclick)="preventDoubleClick($event)"
+  ></div>
+</div>

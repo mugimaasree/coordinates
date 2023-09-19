@@ -1,0 +1,46 @@
+.container {
+    height: 230px;
+    width: 400px;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    gap: 15px;
+    background-color: rgba(129, 190, 244);
+    position: relative;
+    top: -850px;
+    left:700px;
+    z-index: 1;
+}
+
+label {
+    font-weight: 600;
+}
+
+input {
+    height: 20px;
+    font-size: 20px;
+}
+
+button {
+    background-color: green;
+    color: white;
+    height: 30px;
+}
+
+button:hover {
+    background-color: gray;
+
+}
+
+button:focus {
+    background-color: red;
+}
+
+.gross {
+    position: absolute;
+    left:95%;
+    top:-5%;
+}
+

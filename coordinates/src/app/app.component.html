@@ -1,0 +1,7 @@
+<div class="container" [class.blur]="boxBlur">
+    <app-input></app-input>
+    <app-output></app-output>
+    <button class="button" (click)="toggleCreateBox()">ADD</button>
+</div>
+<app-create-box *ngIf="showCreateBoxComponent" (closeEvent)="toggleCreateBox()"></app-create-box>
+  

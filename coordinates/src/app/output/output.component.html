@@ -1,0 +1,9 @@
+<div class="OutputContainer">
+  <p>Output</p>
+  <app-display-box 
+    *ngFor="let box of boxService.createbox | async" [box]="box" 
+    (delete)="onDeleteBox(box)"
+    [isSelected]="box === selectedBox"
+    [class.highlight]="box===selectedBox" (click)="toggleBorder(box)">
+  </app-display-box>
+</div>
